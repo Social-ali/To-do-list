@@ -1,0 +1,192 @@
+/* General Styles */
+body {
+  color: #6F8BA4;
+  margin-top: 20px;
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for dark mode */
+  background-color: #ffffff; /* Light background color by default */
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: #121212; /* Dark background color */
+  color: #e0e0e0; /* Light text color */
+}
+
+/* Layout and Container Styles */
+.container {
+  margin-top: -100px;
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  border: 0%;
+}
+
+/* Section Styles */
+.section {
+  padding: 100px 0;
+  position: relative;
+}
+
+.gray-bg {
+  background-color: #f5f5f5; /* Light background color */
+}
+
+body.dark-mode .gray-bg {
+  background-color: #1e1e1e; /* Dark gray background for sections */
+}
+
+/* Contact Us Styles */
+.contact-name {
+  margin-bottom: 30px;
+}
+
+.contact-name h5 {
+  font-size: 22px;
+  color: #20247b; /* Dark blue text */
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.contact-name p {
+  font-size: 18px;
+  margin: 0;
+}
+
+/* Social Share Styles */
+.social-share a {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #ffffff;
+  text-align: center;
+  margin-right: 10px;
+}
+
+.social-share .dribbble {
+  box-shadow: 0 8px 30px -4px rgba(234, 76, 137, 0.5);
+  background-color: #ea4c89;
+}
+
+.social-share .behance {
+  box-shadow: 0 8px 30px -4px rgba(0, 103, 255, 0.5);
+  background-color: #0067ff;
+}
+
+.social-share .linkedin {
+  box-shadow: 0 8px 30px -4px rgba(1, 119, 172, 0.5);
+  background-color: #0177ac;
+}
+
+/* Contact Form Styles */
+.contact-form .form-control {
+  border: none;
+  border-bottom: 1px solid #20247b; /* Light border color */
+  background: transparent;
+  border-radius: 0;
+  padding-left: 0;
+  box-shadow: none !important;
+  color: #6F8BA4; /* Default text color */
+}
+
+
+body.dark-mode .contact-form .form-control {
+  border-bottom: 1px solid #444; /* Darker border for dark mode */
+  color: #e0e0e0; /* Light text color for dark mode */
+}
+
+.contact-form .form-control:focus {
+  border-bottom: 1px solid #fc5356; /* Accent color on focus */
+}
+
+.contact-form .form-control.invalid {
+  border-bottom: 1px solid #ff0000; /* Red border for invalid inputs */
+}
+
+.contact-form .send {
+  margin-top: 20px;
+}
+
+@media (max-width: 767px) {
+  .contact-form .send {
+      margin-bottom: 20px;
+  }
+}
+
+/* Section Title Styles */
+.section-title h2 {
+  font-weight: 700;
+  color: #20247b; /* Dark blue text */
+  font-size: 45px;
+  margin: 0 0 15px;
+  border-left: 5px solid #fc5356; /* Accent color */
+  padding-left: 15px;
+}
+
+body.dark-mode .section-title h2 {
+  color: #e0e0e0; /* Light text color */
+  border-left: 5px solid #fc5356; /* Accent color remains the same */
+}
+
+.section-title {
+  padding-bottom: 45px;
+}
+
+/* Button Styles */
+.px-btn {
+  padding: 0 50px 0 20px;
+  line-height: 60px;
+  position: relative;
+  display: inline-block;
+  color: #20247b; /* Dark blue text */
+  background: none;
+  border: none;
+}
+
+body.dark-mode .px-btn {
+  color: #e0e0e0; /* Light text color for dark mode */
+}
+
+.px-btn:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  border-radius: 30px;
+  background: transparent;
+  border: 1px solid rgba(252, 83, 86, 0.6); /* Accent border */
+  border-right: 1px solid transparent;
+  transition: ease all 0.35s;
+  width: 60px;
+  height: 60px;
+}
+
+body.dark-mode .px-btn:before {
+  border: 1px solid rgba(252, 83, 86, 0.6); /* Accent border remains the same */
+}
+
+.px-btn .arrow {
+  width: 13px;
+  height: 2px;
+  background: currentColor;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  right: 25px;
+}
+
+.px-btn .arrow:after {
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid currentColor;
+  border-top: 2px solid currentColor;
+  content: "";
+  position: absolute;
+  top: -3px;
+  right: 0;
+  display: inline-block;
+  transform: rotate(45deg);
+}
